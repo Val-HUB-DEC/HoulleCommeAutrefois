@@ -1,0 +1,136 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+    padding-top: 0px;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+.timeline {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+}
+
+.timeline li {
+    position: relative;
+    padding: 20px 0 20px 30px;
+    border-left: 3px solid #de1818f8;
+}
+
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 25px;
+    width: 15px;
+    height: 15px;
+    background-color: #de1818f8;
+    border-radius: 50%;
+}
+
+.timeline .date {
+    font-weight: bold;
+    color: #de1818f8;
+}
+
+/* =========================
+   BARRE ASSOCIATION (FIXE)
+========================= */
+.topbar-association {
+    background-color: #970505;
+    padding: 14px 0;
+    font-size: 1.2rem;
+    color: white;
+
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1030;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* centrage logo + texte */
+.topbar-association .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* =========================
+   BARRE PAGE (FIXE)
+========================= */
+.topbar-page {
+    background-color: #f80505;
+    padding: 6px 0;
+    font-size: 1rem;
+    color: white;
+
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    z-index: 1020;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   LOGO RESPONSIVE
+========================= */
+.logo-association {
+    height: 60px;
+    width: auto;
+}
+
+/* 📱 Smartphone */
+@media (max-width: 576px) {
+    .logo-association {
+        height: 40px;
+    }
+
+    body {
+        padding-top: 110px;
+    }
+
+    .topbar-page {
+        top: 60px;
+    }
+}
+
+
+
+/* =========================
+   CARTES OUTILS
+========================= */
+.tool-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tool-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* images cartes */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* =========================
+   PETITS BONUS VISUELS
+========================= */
+h2, h3, h5 {
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1200px;
+}
