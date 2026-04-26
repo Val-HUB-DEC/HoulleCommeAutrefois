@@ -124,6 +124,12 @@ body {
     object-fit: cover;
 }
 
+
+.schema{
+    height: auto;
+    width: 100% ;
+}
+
 .affiche-img {
     height: auto;
     width: 300px ;
@@ -138,4 +144,49 @@ h2, h3, h5 {
 
 .container {
     max-width: 1200px;
+}
+
+/* Carte désactivée */
+.card-disabled {
+    position: relative;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Overlay gris */
+.card-disabled::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 1;
+}
+
+/* Image grisée */
+.card-disabled img {
+    filter: grayscale(100%) brightness(0.6);
+}
+
+/* TEXTE AU-DESSUS */
+.card-disabled .card-body {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Bandeau TOUJOURS au dessus */
+.ribbon {
+    position: absolute;
+    top: 25%;
+    left: -30%;
+    width: 160%;
+    transform: rotate(-15deg);
+
+    background: #dc3545; /* rouge */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+
+    z-index: 2; /* 🔥 important */
 }
