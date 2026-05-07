@@ -70,11 +70,36 @@
 
     <!--<h2 class="text-center mb-4">Les outils de la moisson</h2>-->
     <!-- 🔸 Notification Date de la fête -->
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        Venez à notre traditionnelle <strong>Fête de la moisson le 23 aout à Houlle</strong>!!!
-        <img src="images/affiche.png" class="affiche-img" alt="affiche">
-        <button type="button" class="btn btn-outline-primary"onclick="addMoissonHoulle()">Ajouter au calendrier</button>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div class="alert alert-warning alert-dismissible fade show shadow alert-moisson" role="alert">
+
+        <h4 class="fw-bold mb-3">
+             Fête de la moisson à Houlle
+        </h4>
+
+        <p class="mb-3">
+            Venez à notre traditionnelle<BR>
+            <strong>🌾Fête de la moisson🌾</strong> <BR>
+            le 23 août à Houlle !
+        </p>
+
+        <img src="images/affiche.png"
+            class="affiche-img"
+            alt="Affiche fête de la moisson">
+
+        <div class="mt-3">
+            <button type="button"
+                    class="btn btn-danger btn-lg shadow btn-calendar"
+                    onclick="addMoissonHoulle(); bootstrap.Alert.getOrCreateInstance(this.closest('.alert')).close();">
+                📅 Ajouter au calendrier
+            </button>
+        </div>
+
+        <button type="button"
+                class="btn-close position-absolute top-0 end-0 m-2"
+                data-bs-dismiss="alert"
+                aria-label="Close">
+        </button>
+
     </div>
 
     <div class="row g-4">
@@ -95,7 +120,7 @@
         <div class="col-12 col-md-6 col-lg-4">
             <a href="marche.html" class="text-decoration-none text-dark">
                 <div class="card shadow h-100 tool-card">
-                    <img src="images/marche.png" class="card-img-top" alt="marche">
+                    <img src="images/marche0.png" class="card-img-top" alt="marche">
                     <div class="card-body">
                         <h5 class="card-title">🥬 Marché du terroir</h5>
                     </div>
@@ -114,8 +139,6 @@
                 </div>
             </a>
         </div>
-
-        
     </div>
 </div>
 

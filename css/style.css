@@ -190,3 +190,67 @@ h2, h3, h5 {
 
     z-index: 2; /* 🔥 important */
 }
+
+/* =========================
+   ALERTE FÊTE
+========================= */
+.alert-moisson {
+    max-width: 850px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    text-align: center;
+    padding: 25px;
+    overflow: hidden;
+}
+
+/* image affiche */
+.affiche-img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 14px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+/* bouton calendrier */
+.btn-calendar {
+    background-color: #dc3545;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.btn-calendar:hover {
+    transform: scale(1.04);
+    background-color: #bb2d3b;
+    box-shadow: 0 6px 16px rgba(220,53,69,0.35);
+}
+
+/* 📱 Smartphone */
+@media (max-width: 576px) {
+
+    .alert-moisson {
+        width: calc(100% - 16px);
+        margin: 10px auto;
+        padding: 18px 12px;
+        border-radius: 14px;
+    }
+
+    .affiche-img {
+        max-width: 100%;
+    }
+
+    .btn-calendar {
+        width: 100%;
+        padding: 14px;
+       font-size: 1rem;
+    }
+}
